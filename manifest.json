@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Sidebar Docker Extension",
+  "version": "1.0",
+  "description": "Adds a sidebar docker with iframe to localhost:5173",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://localhost:5173/*",
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["sidebar.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["sidebar.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
