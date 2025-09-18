@@ -4,25 +4,21 @@
   "version": "1.0",
   "description": "Adds a sidebar docker with iframe to localhost:5173",
   "permissions": [
+    "sidePanel",
     "activeTab",
     "scripting"
   ],
+  "action": {
+    "default_title": "Toggle sidebar panel"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
   "host_permissions": [
     "http://localhost:5173/*",
     "<all_urls>"
-  ],
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "css": ["sidebar.css"],
-      "run_at": "document_end"
-    }
-  ],
-  "web_accessible_resources": [
-    {
-      "resources": ["sidebar.html"],
-      "matches": ["<all_urls>"]
-    }
   ]
 }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Sidebar Docker</title>
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+<div id="sidebar-container">
+    <div id="sidebar-content">
+        <div class="loading" id="loading-indicator">Loading...</div>
+        <div class="connection-error" id="error-message">
+            Unable to connect to localhost:5173
+            <br><br>
+            Make sure your development server is running.
+        </div>
+        <iframe
+                id="sidebar-iframe"
+                src="http://localhost:5173"
+                sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals"
+        ></iframe>
+    </div>
+</div>
+<script src="sidepanel.js"></script>
+</body>
+</html>

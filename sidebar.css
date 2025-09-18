@@ -1,78 +1,46 @@
-/* Sidebar Docker Styles */
-.sidebar-docker {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 400px;
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
   height: 100vh;
-  background-color: #ffffff;
-  border-left: 2px solid #e0e0e0;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 10000;
-  transition: right 0.3s ease;
-  display: flex;
-  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* Iframe Styles */
+#sidebar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #f5f5f5;
+}
+
+#sidebar-title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#sidebar-content {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
 #sidebar-iframe {
   width: 100%;
   height: 100%;
   border: none;
-  flex: 1;
+  background: white;
 }
 
-/* Toggle Button Styles */
-#sidebar-toggle {
-  position: absolute;
-  left: -40px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 60px;
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 8px 0 0 8px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.2s ease;
-  z-index: 10001;
+.connection-error {
+  display: none;
+  padding: 20px;
+  text-align: center;
+  color: #e74c3c;
 }
 
-#sidebar-toggle:hover {
-  background-color: #000;
-}
-
-#sidebar-toggle:active {
-  background-color: #000;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .sidebar-docker {
-    width: 100vw;
-    right: 0;
-  }
-  
-  .sidebar-docker.collapsed {
-    right: -100vw;
-  }
-}
-
-/* Ensure sidebar doesn't interfere with page scrolling */
-body {
-  overflow-x: hidden;
-}
-
-/* Loading state for iframe */
-#sidebar-iframe {
-  background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%), 
-              linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), 
-              linear-gradient(45deg, transparent 75%, #f0f0f0 75%), 
-              linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
-  background-size: 20px 20px;
-  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+.loading {
+  display: none;
+  padding: 20px;
+  text-align: center;
+  color: #7f8c8d;
 }
