@@ -22,11 +22,12 @@ if (!document.getElementById('sidebar-docker-extension')) {
       toggleButton.addEventListener('click', () => {
         if (isCollapsed) {
           sidebar.style.right = '0px';
-          toggleButton.innerHTML = '◀';
+          toggleButton.innerHTML = '▶';
           isCollapsed = false;
         } else {
-          sidebar.style.right = '-350px';
-          toggleButton.innerHTML = '▶';
+          sidebar.style.right = '-400px';
+          toggleButton.innerHTML = '◀';
+
           isCollapsed = true;
         }
       });

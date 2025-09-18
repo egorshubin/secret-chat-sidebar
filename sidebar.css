@@ -30,7 +30,7 @@
   transform: translateY(-50%);
   width: 40px;
   height: 60px;
-  background-color: #4285f4;
+  background-color: #333;
   color: white;
   border: none;
   border-radius: 8px 0 0 8px;
@@ -43,11 +43,11 @@
 }
 
 #sidebar-toggle:hover {
-  background-color: #3367d6;
+  background-color: #000;
 }
 
 #sidebar-toggle:active {
-  background-color: #2851a3;
+  background-color: #000;
 }
 
 /* Responsive adjustments */
