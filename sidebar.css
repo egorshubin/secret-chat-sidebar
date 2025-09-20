@@ -44,3 +44,7 @@ body {
   text-align: center;
   color: #7f8c8d;
 }
+
+#refresh-btn {
+  width: 100px;
+}

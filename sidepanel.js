@@ -46,6 +46,12 @@ iframe.addEventListener('error', () => {
 // Initial load
 showLoading();
 
+// Refresh button functionality
+refreshBtn.addEventListener('click', () => {
+    showLoading();
+    iframe.src = iframe.src; // Reload iframe
+});
+
 // Set timeout for initial load
 setTimeout(() => {
     if (iframe.style.display === 'none' &&
