@@ -63,7 +63,7 @@ setTimeout(() => {
 // Optional: Listen for messages from the iframe
 window.addEventListener('message', (event) => {
     // Verify origin for security
-    if (event.origin !== 'https://secret-chat.ai') return;
+    if (event.origin !== 'https://app.secret-chat.ai') return;
 
     // Handle messages from your localhost app
     console.log('Message from iframe:', event.data);
